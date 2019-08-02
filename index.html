@@ -4,32 +4,42 @@
 	<link href="https://forge.tylertech.com/styles/tcw-material-design.css" rel="stylesheet">
 	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,500,700,400italic|Material+Icons">
 	<script type="text/javascript" src="https://forge.tylertech.com/scripts/tyler-components-web-core.umd.min.js">
+
 	</script>
 </head>
 
 <body class="tyl-typography">
 	<tcw-scaffold>
 		<tcw-app-bar slot="header" title-text="TCW Recipes" style="z-index: 999;">
-      <tcw-icon-button slot="start">
-      <button type="button" class="material-icons tyl-icon-button--light-on-dark" id="tyl-forge-omnibar-menu">
+			<tcw-icon-button slot="start">
+				<button type="button" class="material-icons tyl-icon-button--light-on-dark" id="tyl-forge-omnibar-menu">
         menu
       </button>
     </tcw-icon-button>
     </tcw-app-bar>
 		<div slot="body" style="background-color: #fafafa;">
 			<div id="app">
-				<tcw-toolbar style="--mdc-theme-surface: #fafafa;">
-          <div slot="start" style="display: flex; justify-content: space-around; align-items: center;" >
-            <h5 style="margin: 0px; font-size: 18px;">Toolbar</h5>
-          </div>
-        </tcw-toolbar>
-				<div class="tyl-content-container">
-          <tcw-toolbar style="--mdc-theme-surface: #fafafa;">
-          <div slot="start" style="display: flex; justify-content: space-around; align-items: center;" >
-            <h5 style="margin: 0px; font-size: 18px;">Toolbar</h5>
-          </div>
-        </tcw-toolbar>
-                  </div>
+				<tcw-toolbar slot="header" style="--tyl-toolbar-padding: 0;">
+        <tcw-list slot="center" style="width: 100%;">
+          <tcw-list-item>
+            <i slot="leading" class="material-icons">arrow_back</i>
+            Back
+          </tcw-list-item>
+        </tcw-list>
+        <div slot="end" style="display: flex; justify-content: space-around; align-items: center;">
+    <tcw-icon-button>
+  <button class="material-icons">get_app</button>
+</tcw-icon-button>
+
+<tcw-icon-button>
+  <button class="material-icons">sort</button>
+</tcw-icon-button>
+
+<tcw-icon-button>
+  <button class="material-icons">more_vert</button>
+</tcw-icon-button>
+  </div>
+      </tcw-toolbar>
       </div>
     </tcw-scaffold>
     <script src="https://forge.tylertech.com/scripts/custom-elements-es5-adapter.js"></script>
