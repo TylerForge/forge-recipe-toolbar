@@ -2,3 +2,7 @@ body {
   padding: 0px;
   margin: 0px;
 }
+
+.tyl-content-container {
+  padding: 16px;
+}

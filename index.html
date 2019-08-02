@@ -9,99 +9,29 @@
 
 <body class="tyl-typography">
 	<tcw-scaffold>
-		<tcw-app-bar slot="header" title-text="TCW Demo" style="z-index: 999;">
+		<tcw-app-bar slot="header" title-text="TCW Recipes" style="z-index: 999;">
       <tcw-icon-button slot="start">
       <button type="button" class="material-icons tyl-icon-button--light-on-dark" id="tyl-forge-omnibar-menu">
         menu
       </button>
     </tcw-icon-button>
     </tcw-app-bar>
-		<div slot="body-left">
-			<tcw-drawer type="permanent" open="true">
-				<tcw-toolbar style="--tyl-toolbar-padding: 0;">
-          <div slot="start">
-            <tcw-list>
-					<tcw-list-item>
-						<i class="material-icons" slot="leading">home</i>
-            ESS Home
-          </tcw-list-item>
-          </tcw-list>
-          </div>
-        </tcw-toolbar>
-				<tcw-list>
-					<tcw-list-item selected="true">
-						<i class="material-icons" slot="leading">supervisor_account</i>
-            My team
-          </tcw-list-item>
-          <tcw-list-item>
-            <i class="material-icons" slot="leading">airplanemode_active</i>
-            Team time off
-          </tcw-list-item>
-          <tcw-list-item>
-            <i class="material-icons" slot="leading">border_all</i>
-            Team timesheets
-          </tcw-list-item>
-        </tcw-list>
-			</tcw-drawer>
-		</div>
 		<div slot="body" style="background-color: #fafafa;">
 			<div id="app">
 				<tcw-toolbar style="--mdc-theme-surface: #fafafa;">
           <div slot="start" style="display: flex; justify-content: space-around; align-items: center;" >
-            <h5 style="margin: 0px; font-size: 18px;">My Team</h5>
-            <tcw-text-field style="margin-left: 24px;">
-  <i class="material-icons" slot="leading">filter_list</i>
-  <input type="text" id="input-leading-01" />
-  <label for="input-leading-01">Filter</label>
-</tcw-text-field>
-          </div>
-
-          <div slot="end" style="display: flex; justify-content: space-around; align-items: center;" >
-            <tcw-select value="fruit" label="Sort by">
-  <tcw-option value=""></tcw-option>
-  <tcw-option value="grains">Bread, Cereal, Rice, and Pasta</tcw-option>
-  <tcw-option value="vegetables">Vegetables</tcw-option>
-  <tcw-option value="fruit">Fruit</tcw-option>
-</tcw-select>
+            <h5 style="margin: 0px; font-size: 18px;">Toolbar</h5>
           </div>
         </tcw-toolbar>
 				<div class="tyl-content-container">
-
-					<div class="grid-container" id="grid-container">
-<p>content here</p>
-          
-        </div>
-        </div>
+<p>Content here</p>
+                  </div>
       </div>
     </tcw-scaffold>
     <script src="https://forge.tylertech.com/scripts/custom-elements-es5-adapter.js"></script>
     <script src="https://forge.tylertech.com/scripts/tyler-components-web-lib.min.js"></script>
     <script>
       TylerComponentsWeb.lib.defineComponents();
-    </script>
-
-    <script>
-        const omni = document.querySelector("tcw-app-bar");
-        const navDrawer = document.querySelector("tcw-drawer");
-        var hamburger = document.getElementById('tyl-forge-omnibar-menu');
-        hamburger.style.display = "none";
-
-        hamburger.addEventListener('click', function (evt) {
-          navDrawer.open = !navDrawer.open;
-        });
-
-        function watchScreenSize() {
-            if (document.body.clientWidth <= "1280") {
-                navDrawer.open = false;
-                navDrawer.type = "modal";
-                hamburger.style.display = "";
-            } else {
-                navDrawer.open = true;
-                navDrawer.type = "dismissible";
-            }
-        };
-
-        window.addEventListener('resize', watchScreenSize);
     </script>
   </body>
 </html>
