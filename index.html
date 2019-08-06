@@ -12,21 +12,19 @@
 		<div slot="body" style="background-color: #fafafa;">
 			<div id="app">
 				<tcw-toolbar slot="header" style="--tyl-toolbar-padding: 0;">
-					<tcw-list slot="start">
-						<tcw-list-item>
-							<i slot="leading" class="material-icons">arrow_back</i>
-              Back
-            </tcw-list-item>
-          </tcw-list>
-          <div slot="end" style="display: flex; justify-content: space-around; align-items: center;">
+					<div slot="start" class="tyl-toolbar-start">
+            <tcw-icon-button>
+              <button type="button" class="material-icons">arrow_back</button>
+            </tcw-icon-button>
+            <span class="tyl-typography--title">Back</span>
+          </div>
+          <div slot="end" class="tyl-toolbar-end">
             <tcw-icon-button>
               <button class="material-icons">get_app</button>
             </tcw-icon-button>
-
             <tcw-icon-button>
               <button class="material-icons">sort</button>
             </tcw-icon-button>
-
             <tcw-icon-button>
               <button class="material-icons">more_vert</button>
             </tcw-icon-button>
